@@ -6,6 +6,7 @@
 .container{
     width: 100%;
     font-size: 1.125rem;
+    background-color: rgb(214, 228, 243);
 }
 header {
     width: 100%;
@@ -107,4 +108,9 @@ main{
 }
 .model-image img {
     width: 100%;
+}
+footer {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
 }
