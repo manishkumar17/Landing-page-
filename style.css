@@ -10,6 +10,7 @@
 }
 header {
     width: 100%;
+    font-family: 'Thasadith', sans-serif;
     margin: 0 auto;
     height: 80px;
     display: flex;
@@ -39,6 +40,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    color: black;
 }
 .nav-links li {
     display: block;
@@ -78,8 +80,9 @@ main{
 .left-desc p{
     margin-top: 30px;
     font-size: 14px;
-    width: 420px;
+    width: 380px;
     font-weight: 300;
+    font-family: 'Thasadith', sans-serif;
     line-height: 2;
 }
 .left-desc a {
