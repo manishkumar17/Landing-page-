@@ -15,8 +15,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    box-shadow: black 0 20px 20px -10px;
+    background: linear-gradient(rgba(255,255,255,1), rgba(0,0,0,.1));
 }
 nav{
     width: 100%;
@@ -44,6 +43,7 @@ nav{
 .nav-links li {
     display: block;
     margin-right: 60px;
+    font-size: 16px;
     color: rgba(128, 128, 128, 0.452);
 }
 .nav-links li:last-of-type {
@@ -59,6 +59,7 @@ main{
 .left-desc {
     width: 35%;
     height: 70%;
+    min-width: 450px;
     /* background-color: cyan; */
     display: flex;
     flex-direction: column;
@@ -104,7 +105,8 @@ main{
 }
 .model-image{
     width: 45%;
-    margin-top: 70px;
+    margin-top: 80px;
+    min-width: 400px;
 }
 .model-image img {
     width: 100%;
@@ -113,4 +115,101 @@ footer {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
+}
+.bubble1 {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(rgba(0,0,0,0.01),rgba(255,255,255,.2));
+    position: absolute;
+    top: 150px;
+    left: -30px;
+    box-shadow: black 0 1px 15px -12px;
+    border-radius: 50%;
+    animation: bubble-ani 40s ease-in-out infinite;
+    animation-direction: alternate;
+}
+@keyframes bubble-ani {
+    from {
+        left: -30px;
+        opacity: 1;   
+    }
+    to {
+        left: 300px;
+        opacity: 0.8;
+    }
+}
+.bubble2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(rgba(0,0,0,0.01),rgba(255,255,255,.2));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: black 0 1px 15px -12px;
+    border-radius: 50%;
+    animation: animate2 40s ease infinite;
+    animation-direction: alternate;
+}
+@keyframes animate2 {
+    from {
+        transform: translate(-50%,-50%);
+        opacity: 1;   
+    }
+    to {
+        transform: translate(100%,50%);
+        opacity: 0.8;
+    }
+}
+.bubble3 {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(rgba(0,0,0,0.01),rgba(255,255,255,.2));
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: black 0 3px 15px -12px;
+    border-radius: 50%;
+    animation: animate3 20s ease infinite;
+    animation-direction: alternate;
+}
+@keyframes animate3 {
+    from {
+        transform: translate(20%,-50%);
+        opacity: 1;   
+    }
+    to {
+        transform: translate(-200%,-50%);
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .model-image {
+        margin-top: 150px;
+    }
+}
+@media screen and (max-width: 918px){
+    main {
+        flex-direction: column;
+    }
+    .model-image {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 834px){
+    .nav-links {
+        display: none;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .left-desc {
+        height: 50%;
+    }
+    .bubble2 {
+        display: none;
+    }
 }
