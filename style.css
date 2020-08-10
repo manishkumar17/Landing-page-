@@ -2,19 +2,23 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: black;
+    line-height: 1.;
+}
+body{
+    background-color: rgb(214, 228, 243);
 }
 .container{
     width: 100%;
     font-size: 1.125rem;
-    background-color: rgb(239, 244, 248);
 }
 header {
     width: 100%;
+    position: fixed;
     font-family: 'Thasadith', sans-serif;
     margin: 0 auto;
     height: 80px;
     display: flex;
+    box-shadow: black 0 5px 15px -10px;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -42,13 +46,21 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: black;
 }
 .nav-links li {
     display: block;
     margin-right: 60px;
     font-size: 16px;
-    color: rgba(128, 128, 128, 0.452);
+}
+.nav-links a {
+    color: rgba(70, 57, 57, 0.733);
+}
+.nav-links a:hover {
+    transition: all 0.3s ease-in-out;
+    color: black;
+}
+.nav-links a.search{
+    color: black;
 }
 .nav-links li:last-of-type {
     margin-right: 0;
@@ -61,14 +73,12 @@ main{
     background-color: rgb(214, 228, 243);
 }
 .left-desc {
-    width: 35%;
+    width: 45%;
     height: 70%;
-    min-width: 450px;
-    /* background-color: cyan; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 .first-row {
     font-size: 60px;
@@ -78,6 +88,9 @@ main{
 .second-row {
     font-size: 70px;
     width: 100%;
+}
+.second-row span{
+    color: red;
 }
 .left-desc p{
     margin-top: 30px;
@@ -110,8 +123,7 @@ main{
 }
 .model-image{
     width: 45%;
-    margin-top: 80px;
-    min-width: 400px;
+    margin-top: 170px;
 }
 .model-image img {
     width: 100%;
@@ -120,6 +132,7 @@ footer {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .bubble1 {
     width: 180px;
@@ -153,7 +166,7 @@ footer {
     transform: translate(-50%,-50%);
     box-shadow: black 0 1px 15px -12px;
     border-radius: 50%;
-    animation: animate2 40s ease infinite;
+    animation: animate2 30s ease infinite;
     animation-direction: alternate;
 }
 @keyframes animate2 {
@@ -162,7 +175,7 @@ footer {
         opacity: 1;   
     }
     to {
-        transform: translate(100%,50%);
+        transform: translate(40%,20%);
         opacity: 0.8;
     }
 }
@@ -190,31 +203,207 @@ footer {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 919px) and (max-width: 1024px) {
     .model-image {
         margin-top: 150px;
     }
+    .left-desc {
+        width: 50%;
+        margin: 90px auto;
+    }
 }
-@media screen and (max-width: 918px){
+@media (min-width: 835px) and (max-width: 918px){
     main {
         flex-direction: column;
-    }
-    .model-image {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-@media screen and (max-width: 834px){
-    .nav-links {
-        display: none;
-    }
-    .logo {
+        width: 80%;
         margin: 0 auto;
     }
     .left-desc {
-        height: 50%;
+        width: 100%;
+        text-align: center;
+        margin: 100px auto 20px 0px;
+    }
+    .first-row {
+        font-size: 70px;
+        font-weight: 100;
+        width: 100%;
+    }
+    .second-row {
+        font-size: 80px;
+        width: 100%;
+    }
+    .left-desc p{
+        font-size: 18px;
+        width: 70%;
+        margin: 10px auto;
+        font-weight: 300;
+        font-family: 'Thasadith', sans-serif;
+        line-height: 2;
+    }
+    .left-desc a {
+        width: 30%;
+        padding: 12px;
+        max-width: 100px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+    .left-desc i{
+        margin-top: 3px;
+    }
+    .model-image {
+        width: 80%;
+        margin: 0px auto;
+        max-width: 400px;
+    }
+
+}
+@media (min-width: 481px) and (max-width: 834px){
+    main {
+        flex-direction: column;
+    }
+    .nav-links {
+        display: none;
     }
     .bubble2 {
         display: none;
     }
+    .left-desc {
+        width: 100%;
+        text-align: center;
+        margin: 150px auto 20px 0px;
+    }
+    .first-row {
+        font-size: 65px;
+        font-weight: 100;
+        width: 100%;
+    }
+    .second-row {
+        font-size: 70px;
+        width: 100%;
+    }
+    .left-desc p{
+        margin: 10px auto;
+        font-size: 18px;
+        width: 70%;
+        font-weight: 300;
+        font-family: 'Thasadith', sans-serif;
+        line-height: 2;
+    }
+    .left-desc a {
+        width: 30%;
+        max-width: 100px;
+        padding: 12px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+    .left-desc i{
+        margin-top: 3px;
+    }
+    .model-image {
+        width: 80%;
+        margin: 0px auto;
+        max-width: 420px;
+    }
+    .bubble1,
+    .bubble2,
+    .bubble3 {
+        display: none;
+    }
 }
+@media screen and (max-width: 480px){
+    main {
+        flex-direction: column;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .nav-links {
+        display: none;
+    }
+    .bubble2 {
+        display: none;
+    }
+    .left-desc {
+        width: 95%; 
+        margin: 100px auto 20px auto;
+    }
+    .first-row {
+        font-size: 50px;
+        font-weight: 100;
+        line-height: 1.1;
+        width: 100%;
+    }
+    .second-row {
+        font-size: 50px;
+        line-height: 1.1;
+        width: 100%;
+    }
+    .left-desc p{
+        margin-top: 20px;
+        font-size: 15px;
+        width: 100%;
+        font-weight: 300;
+        font-family: 'Thasadith', sans-serif;
+        line-height: 2;
+    }
+    .left-desc a {
+        width: 30%;
+        padding: 10px;
+        font-size: 12px;
+        margin: 0 auto;
+    }
+    .left-desc i{
+        margin-top: 3px;
+    }
+    .model-image {
+        width: 80%;
+        margin: 0px auto;
+        max-width: 420px;
+    }
+    .bubble1,
+    .bubble2,
+    .bubble3 {
+        display: none;
+    }
+}
+/* @media screen and (max-width: 360px){
+    main {
+        flex-direction: column;
+    }
+    .left-desc {
+        width: 90%;
+    }
+    .first-row {
+        font-size: 40px;
+        font-weight: 100;
+        width: 100%;
+    }
+    .second-row {
+        font-size: 40px;
+        width: 100%;
+    }
+    .left-desc p{
+        margin-top: 30px;
+        font-size: 10px;
+        width: 100%;
+        font-weight: 300;
+        font-family: 'Thasadith', sans-serif;
+        line-height: 2;
+    }
+    .left-desc a {
+        width: 30%;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .left-desc i{
+        margin-top: 3px;
+    }
+    .model-image {
+        width: 90%;
+    }
+    .bubble1,
+    .bubble2,
+    .bubble3 {
+        display: none;
+    }
+} */
